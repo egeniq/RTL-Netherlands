@@ -1,0 +1,2 @@
+include ':app', ':AR SDK-debug'
+rootProject.name='My Application'
