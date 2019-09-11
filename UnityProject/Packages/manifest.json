@@ -9,9 +9,6 @@
     }
   ],
   "dependencies": {
-    "com.inceptionxr.iarcore": "1.0.5",
-    "com.inceptionxr.network": "1.0.1",
-    "com.inceptionxr.uitools": "1.0.7",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ext.nunit": "1.0.0",
     "com.unity.ide.rider": "1.0.8",
