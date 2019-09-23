@@ -39,7 +39,7 @@ apply plugin: 'com.android.library'
 ## Deployment (iOS)
 
 ### Build the unity project
-1. Build Unity3D project with. This will create an xcode project.
+1. Build Unity3D project with the 'export' option. This will create an xcode project.
 2. Open `Application.xcworkspace`. Notice you have 2 project inside: the main application and a Launcher.
 3. From the Unity build folder, Add `Data` folder to the application project as a reference (blue icon).
 4. Add `Library` and `Classes` the the Launcher project as groups (yellow icon).
