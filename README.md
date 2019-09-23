@@ -46,7 +46,7 @@ apply plugin: 'com.android.library'
 5. From the 'UnityBuild' folder add `Data` folder to the Example application project as a reference (blue icon).
 6. From the 'UnityLauncher' project, remove the current placeholder `Classes` and `Libraries` (reference only, not 'delete')
 7. Add `Library` and `Classes` from the `UnityBuild` folder to the UnityLauncherLauncher project as groups (yellow icon).
-8. From `Library` we Added, remove il2cpp folder reference (Do not delete the folder, just the reference!)
+8. From `Library` we Added, remove `libil2cpp` folder reference (Do not delete the folder, just the reference!)
 9. From `Classes` remove `DynamicLibEngineAPI.mm` and `DynamicLibEngineAPI-functions.h` references.
 10. From `Classes` open `CrashReporter.mm`. Replace: 
 ```Objective-C
