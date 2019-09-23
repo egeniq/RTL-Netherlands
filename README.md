@@ -40,12 +40,15 @@ apply plugin: 'com.android.library'
 
 ### Build the unity project
 1. Build Unity3D project with the 'export' option. This will create an xcode project.
-2. Open `Application.xcworkspace`. Notice you have 2 project inside: the main application and a Launcher.
-3. From the Unity build folder, Add `Data` folder to the application project as a reference (blue icon).
-4. Add `Library` and `Classes` the the Launcher project as groups (yellow icon).
-5. From `Library` we Added, remove il2cpp folder reference (Do not delete the folder, just the reference!)
-6. From `Classes` remove `DynamicLibEngineAPI.mm` and `DynamicLibEngineAPI-functions.h` references.
-7. From `Classes` open `CrashReporter.mm`. Replace: 
+2. as Target Folder, make sure you save it to <project-root>/iOS/UnityBuild
+3. Open `Application.xcworkspace`. Notice you have 2 project inside: the main application ('Example') and a Launcher ('UnityLauncher').
+4. Remove the placeholder `Data` from 'Example' ('remove reference')
+5. From the 'UnityBuild' folder add `Data` folder to the Example application project as a reference (blue icon).
+6. From the 'UnityLauncher' project, remove the current placeholder `Classes` and `Libraries` (reference only, not 'delete')
+7. Add `Library` and `Classes` from the `UnityBuild` folder to the UnityLauncherLauncher project as groups (yellow icon).
+8. From `Library` we Added, remove il2cpp folder reference (Do not delete the folder, just the reference!)
+9. From `Classes` remove `DynamicLibEngineAPI.mm` and `DynamicLibEngineAPI-functions.h` references.
+10. From `Classes` open `CrashReporter.mm`. Replace: 
 ```Objective-C
 static NSUncaughtExceptionHandler* gsCrashReporterUEHandler = NULL;
 
@@ -89,7 +92,13 @@ extern "C" int UnityGetAppLoadCommandCount()
     return 0;
 }
 ```
-8. Run the application to a device.
+11. Select the 'UnityLauncher' Scheme, and as destination select a physical device or 'generic iOS Device'
+12. Build
+13. From the 'Example' project, remove the `UnityLauncher.framework` 
+14. in `Products` right-click the `UnityLauncher.framework` and 'show in Finder'
+15. Add the `UnityLauncher.framework` to the example project (Copy if needed)
+16. Make sure that in the `Example` Target, tab 'general' the `UnityLauncher.framework` is added to 'Embedded Binaries'
+17. Make sure that in the `Example` Target, tab 'general' the `UnityLauncher.framework` is added to 'Linked Frameworks and Libraries' and set to `Optional`
 
 
 
