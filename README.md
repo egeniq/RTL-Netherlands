@@ -98,7 +98,7 @@ extern "C" int UnityGetAppLoadCommandCount()
 14. in `Products` right-click the `UnityLauncher.framework` and 'show in Finder'
 15. Add the `UnityLauncher.framework` to the example project (Copy if needed)
 16. Make sure that in the `Example` Target, tab 'general' the `UnityLauncher.framework` is added to 'Embedded Binaries'
-17. Make sure that in the `Example` Target, tab 'general' the `UnityLauncher.framework` is added to 'Linked Frameworks and Libraries' and set to `Optional`
+17. Make sure that in the `Example` Target, tab 'Build Phases' the `UnityLauncher.framework` is added to 'Linked Frameworks and Libraries' and set to `Optional`
 
 
 
