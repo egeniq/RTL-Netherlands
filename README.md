@@ -99,6 +99,10 @@ extern "C" int UnityGetAppLoadCommandCount()
 15. Add the `UnityLauncher.framework` to the example project (Copy if needed)
 16. Make sure that in the `Example` Target, tab 'general' the `UnityLauncher.framework` is added to 'Embedded Binaries'
 17. Make sure that in the `Example` Target, tab 'Build Phases' the `UnityLauncher.framework` is added to 'Linked Frameworks and Libraries' and set to `Optional`
+18. Select the 'Example' scheme and make sure that the signing is valid for 'on-device' builds.
+19. Build and run
+
+
 
 
 
