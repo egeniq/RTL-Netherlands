@@ -103,7 +103,16 @@ extern "C" int UnityGetAppLoadCommandCount()
 19. Build and run
 
 
+### Intergration in Swift
+Note that the project is written in Objective-C, but nowadays we moved on to Swift.
+Notice that in `main.m` we initialize Unity with `[Launcher unityInit:argc argv:(argv)];`
 
+For Swift, however, use the following (either in your AppDelegate or class that is going to implement it:)
+`Launcher.unityInit(CommandLine.argc, argv: CommandLine.unsafeArgv)`
+
+Make sure this is only run ONCE during your app's lifecycle.
+
+to launch the Unity application, use `Launcher.startUnity(viewController)` where `viewController` is a reference to the presenting UIViewController.
 
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
