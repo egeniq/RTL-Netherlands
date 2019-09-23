@@ -8,7 +8,7 @@ These instructions will get you to run a sample application with navigation betw
 
 ### Prerequisites
 
-* Unity3D 2019.2.0f1 or newer
+* Unity3D 2019.2.0f1 ~or newer~ Don't use newer!!
 * For Android: Android studio (Latest recommended) and android sdk, Java 8
 * For iOS: Xcode
 
