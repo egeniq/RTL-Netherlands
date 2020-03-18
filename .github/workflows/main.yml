@@ -1,0 +1,17 @@
+on: push
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        env:
+          DESTINATION_BRANCH: "refs/heads/*"
+          DESTINATION_REPO: "git@github.com:rtlnl/rtl-rng-Inception-XR.git"
+          SOURCE_BRANCH: "refs/remotes/source/*"
+          SOURCE_REPO: "git@github.com:egeniq/RTL-RNG-Inception-XR.git"
+          SSH_PRIVATE_KEY: "${{ secrets.SSH_PRIVATE_KEY }}"
+        name: repo-sync
+        uses: wei/git-sync@v1
+        if: github.repository == 'egeniq/RTL-RNG-Inception-XR'
+        with:
+          args: "$SOURCE_REPO $SOURCE_BRANCH $DESTINATION_REPO $DESTINATION_BRANCH"
